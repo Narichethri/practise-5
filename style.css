@@ -1,0 +1,78 @@
+body{
+    background-image:url(image5.webp);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.container{
+    width:50%;
+    height:auto;
+    margin-left:20%;
+}
+.bar{
+    counter-reset:step;
+
+}
+.bar li{
+    list-style-type:none;
+    float:left;
+    width:33.33%;
+    position:relative;
+    text-align:center;
+    
+}
+.bar li:before{
+    content:counter(step);
+    counter-increment:step;
+    width:15px;
+    height:15px;
+    border:1px solid #ddd;
+    display:block;
+    text-align:center;
+    margin:0 auto 15px auto;
+    border-radius:50%;
+}
+.bar li:after{
+    content:"";
+    position:absolute;
+    width:96%;
+    height:2px;
+    background-color:#ddd;
+    top:9px;
+    left:-48%;
+    z-index:-1;
+}
+.bar li:first-child:after{
+    content:none;
+}
+.bar li.active{
+    color:green;
+}
+.bar li.active:before{
+    border-color:green;
+}
+.step1{
+    text-align:center;
+    width:50%;
+    margin-left:27%;
+    padding-top:10%;
+    
+}
+.step1 form{
+    width:75%;
+    height:100%;
+    padding:5px;
+    background-color:white;
+    border:2px solid black;
+}
+.step1 input{
+    padding:5px;
+    margin:5px;
+}
+.step1 a{
+    padding:5px 15px;
+    background-color:pink;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+
+}
